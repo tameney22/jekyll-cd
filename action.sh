@@ -7,11 +7,11 @@ bundle exec jekyll -v || exit 1
 
 echo '🧹 Clean site'
 if [ -d "docs" ]; then
-    rm -rf docs/*
+    rm -rf _site/*
 fi
 
 echo '🔨 Build site'
-bundle exec jekyll build -d docs
+bundle exec jekyll build -d _site
 rm -rf .jekyll-cache
 
 echo '🧪 Deploy build'
